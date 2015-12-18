@@ -1,0 +1,9 @@
+form .form-group {
+	padding-top:15px
+}
+
+form .form-group textarea{
+	width: 60% !important;
+    min-height: 35em;
+
+}

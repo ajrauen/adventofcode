@@ -62,7 +62,6 @@ var problemTwo = function(){
 	var neededSquareFeet = 0
 		dimensionArray = [],
 		i = 0,
-		j = 0,
 		len = inputs.length;
 	
 	//So inputs is an array of strings that look something like this "23x45x85". I want to go through each of those strings.
@@ -86,6 +85,32 @@ var problemTwo = function(){
 		neededSquareFeet = neededSquareFeet + totalArea
 	}
 	$('#probAnwser2').val(neededSquareFeet)
+}
+
+var problemTwoTwo = function(){
+	//Same as problemTwo
+	var inputs = problemTwoInput.split("\n");
+	var neededSquareFeet = 0
+		dimensionArray = [],
+		i = 0,
+		len = inputs.length;
+	
+	for(i;i<len;i++){
+		//Split things up the same way again
+		dimensionArray = inputs[i].split('x').map( Number );
+
+		//The problem ask us to find the least amount of ribbon to wrap the sides. The formual for that is 
+		// 2 * the shortest side + 2 * the second shortest side.
+		// Using the same sort function as problemTwo, the first and second item in the array will be the shortest
+		//Next the problem wants the length of the ribbon which is all of the sides multipled together. Add them all up and you have your anwser
+		var sorted = dimensionArray.sort(function(a, b){return a-b}),
+			ribbon = 2 * sorted[0] + 2 * sorted[1] + sorted[0] * sorted[1] * sorted[2];
+
+		//finally, add the area to the total number of needed square feet
+		neededSquareFeet = neededSquareFeet + ribbon
+	}
+		$('#probAnwser22').val(neededSquareFeet)
+
 }
 
 

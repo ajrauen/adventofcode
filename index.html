@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>JS Bin</title>
+  <title>Advent of Code</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 
@@ -15,8 +15,6 @@
   <script src="inputs.js"></script>
 
 </head>
-
-<
 
 <body>
 
@@ -87,7 +85,7 @@
 	</div>	
   </div>
   <div class="tab-pane" id="p2" role="tabpanel">
-  <div id="prob2Container">
+  <div id="prob2Part1Container">
 	<div class="col-md-12">
 		First up is a simple parse and count problem. It can be found <a href="http://adventofcode.com/day/1#" target="_blank">Here</a> This problem is broken into two parts.
 	</div>
@@ -106,9 +104,41 @@
 			</div>
 			 <textarea class="form-control" id="probSolution2"></textarea>
 		  </div>
-		  
 		</form>
+		
+		<div class="form-group col-md-12">
+			<div class="col-md-2">
+				<button id="prob2Part2Btn" type="button" class="btn btn-primary">On to Part 2!</button>
+			</div>
+		  </div>
 	</div>
+	
+	<div id="prob2Part2Container" style="display:none">
+		This one is a bit harder. They want us to find out when the number is negative and then print out where it went negative in the string. So if the 6 charactor made the total go to -1. We'd print 5;
+		<form id="prob1Part2Form" class="form-inline col-md-12">
+		  <div class="form-group col-md-12">
+			<div class="col-md-2">
+				<button id="probBtn22" type="button" for="probAnwser22" class="btn btn-primary">Get Anwser</button>
+			</div>
+			 <input type="text" class="form-control " id="probAnwser22">
+		  </div>
+		  
+		  <div class="form-group col-md-12">
+			<div class="col-md-2">
+				<button id="probSolutionBtn22" type="button" for="probSolution22" class="btn btn-primary">see A solution</button>
+			</div>
+			 <textarea class="form-control" id="probSolution22"></textarea>
+		  </div>
+		  
+		  <div class="form-group col-md-12">
+			<div class="col-md-2">
+				<button id="prob2Part1Btn" type="button" class="btn btn-primary">Back to Part 1!</button>
+			</div>
+		  </div>
+		</form>
+	</div>	
+	
+	
   </div>
 </div>
 

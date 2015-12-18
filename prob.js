@@ -49,24 +49,40 @@ var problemOneTwo = function(){
 }
 
 var problemTwo = function(){
+	//I used a little trick(backtick) that is only availabe in Chrome and newer versions of firefox that let me paste multiable lines of text.
+	
+	//Here I break apart the string by the newline character
 	var inputs = problemTwoInput.split("\n");
 	
+	//Initial some variables
+	/*
+		neededSquareFeet: holds total feet;
+		dimensionArray: holds a single array that consist of 3 values.
+	*/
 	var neededSquareFeet = 0
 		dimensionArray = [],
 		i = 0,
 		j = 0,
 		len = inputs.length;
-	//Go through whole array. If the item in the array is a '(', the rules say add. So we do. Other wise we subrtract	
+	
+	//So inputs is an array of strings that look something like this "23x45x85". I want to go through each of those strings.
 	for(i;i<len;i++){
+		//First I want to break that strings into its numbers. So I split the strings on the 'x' and then turn the string into a number
+		//Example the string "23" becomes the number 23;
 		dimensionArray = inputs[i].split('x').map( Number );
-		console.log(dimensionArray)
+		//Next we do the math to get the sides;
 		var s1 = 2 * dimensionArray[0] * dimensionArray[1],
 			s2 = 2 * dimensionArray[1] * dimensionArray[2],
 			s3 = 2 * dimensionArray[0] * dimensionArray[2];
 		
+		//And we get the area with the sides;
 		var totalArea = s1 + s2 + s3,
+			//I want to find the smallest side so I sort them. The smallest will be the first item in the array or smallside[0]
+			//Since I multplied by 2 when I computed the side, I now have to divid by 2
 			smallestSide = [s1,s2,s3].sort(function(a, b){return a-b})[0]/2;
+		//Add the area with the smallest side
 		totalArea = totalArea + smallestSide;
+		//finally, add the area to the total number of needed square feet
 		neededSquareFeet = neededSquareFeet + totalArea
 	}
 	$('#probAnwser2').val(neededSquareFeet)

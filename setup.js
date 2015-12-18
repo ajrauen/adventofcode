@@ -21,6 +21,12 @@ $(document).ready(function(){
 		$('#probSolution12').val(functString.trim());
 	});
 	
+	$('#probSolutionBtn2').click(function(){
+		var functString = problemTwo.toString();
+		$('#probSolution2').val(functString.trim());
+	});
+	
+	
 	$('#prob1Part2Btn').click(function(){
 		$('#prob1Part1Container').hide();
 		$('#prob1Part2Container').show();

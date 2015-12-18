@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <title>Advent of Code</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 
   
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
-  <script src="setup.js"></script>
-  <script src="prob.js"></script>
-  <script src="inputs.js"></script>
+  <script src="js/setup.js"></script>
+  <script src="js/prob.js"></script>
+  <script src="js/inputs.js"></script>
 
 </head>
 
@@ -25,7 +25,9 @@
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#p2" role="tab">Problem 2</a>
   </li>
-  
+    <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#p3" role="tab">Problem 3</a>
+  </li>
 </ul>
 
 <!-- Tab panes -->
@@ -33,15 +35,15 @@
   <div class="tab-pane active" id="p1" role="tabpanel">
 	<div id="prob1Part1Container">
 		<div class="col-md-12">
-		First up is a simple parse and count problem. It can be found <a href="http://adventofcode.com/day/1#" target="_blank">Here</a> This problem is broken into two parts.
+		Problem 1 can be found <a href="http://adventofcode.com/day/1#" target="_blank">Here</a> and is broken into two parts.
 		</div>
 		<form class="form-inline col-md-12">
 		
 		  <div class="form-group col-md-12">
 			<div class="col-md-2">
-				<button id="probBtn1" type="button" for="probAnwser1" class="btn btn-primary">Get Anwser</button>
+				<button id="probBtn1" type="button" for="probAnswer1" class="btn btn-primary">Get Answer</button>
 			</div>
-			 <input type="text" class="form-control " id="probAnwser1">
+			 <input type="text" class="form-control " id="probAnswer1">
 		  </div>
 		  
 		  <div class="form-group col-md-12">
@@ -60,13 +62,12 @@
 	</div>
 	
 	<div id="prob1Part2Container" style="display:none">
-		This one is a bit harder. They want us to find out when the number is negative and then print out where it went negative in the string. So if the 6 charactor made the total go to -1. We'd print 5;
 		<form id="prob1Part2Form" class="form-inline col-md-12">
 		  <div class="form-group col-md-12">
 			<div class="col-md-2">
-				<button id="probBtn12" type="button" for="probAnwser1" class="btn btn-primary">Get Anwser</button>
+				<button id="probBtn12" type="button" for="probAnswer1" class="btn btn-primary">Get Answer</button>
 			</div>
-			 <input type="text" class="form-control " id="probAnwser12">
+			 <input type="text" class="form-control " id="probAnswer12">
 		  </div>
 		  
 		  <div class="form-group col-md-12">
@@ -85,42 +86,40 @@
 	</div>	
   </div>
   <div class="tab-pane" id="p2" role="tabpanel">
-  <div id="prob2Part1Container">
-	<div class="col-md-12">
-		First up is a simple parse and count problem. It can be found <a href="http://adventofcode.com/day/1#" target="_blank">Here</a> This problem is broken into two parts.
-	</div>
-		<form class="form-inline col-md-12">
-		
-		  <div class="form-group col-md-12">
-			<div class="col-md-2">
-				<button id="probBtn2" type="button" for="probAnwser2" class="btn btn-primary">Get Anwser</button>
+	  <div id="prob2Part1Container">
+		<div class="col-md-12">
+			Problem 2 can be found <a href="http://adventofcode.com/day/2#" target="_blank">Here</a> and is broken into two parts.
+		</div>
+			<form class="form-inline col-md-12">
+			  <div class="form-group col-md-12">
+				<div class="col-md-2">
+					<button id="probBtn2" type="button" for="probAnswer2" class="btn btn-primary">Get Answer</button>
+				</div>
+				 <input type="text" class="form-control " id="probAnswer2">
+			  </div>
+
+			  <div class="form-group col-md-12">
+				<div class="col-md-2">
+					<button id="probSolutionBtn2" type="button" for="probSolution2" class="btn btn-primary">see A solution</button>
+				</div>
+				 <textarea class="form-control" id="probSolution2"></textarea>
+			  </div>
+			</form>
+
+			<div class="form-group col-md-12">
+				<div class="col-md-2">
+					<button id="prob2Part2Btn" type="button" class="btn btn-primary">On to Part 2!</button>
+				</div>
 			</div>
-			 <input type="text" class="form-control " id="probAnwser2">
-		  </div>
-		  
-		  <div class="form-group col-md-12">
-			<div class="col-md-2">
-				<button id="probSolutionBtn2" type="button" for="probSolution2" class="btn btn-primary">see A solution</button>
-			</div>
-			 <textarea class="form-control" id="probSolution2"></textarea>
-		  </div>
-		</form>
-		
-		<div class="form-group col-md-12">
-			<div class="col-md-2">
-				<button id="prob2Part2Btn" type="button" class="btn btn-primary">On to Part 2!</button>
-			</div>
-		  </div>
-	</div>
+		</div>
 	
 	<div id="prob2Part2Container" style="display:none">
-		This one is a bit harder. They want us to find out when the number is negative and then print out where it went negative in the string. So if the 6 charactor made the total go to -1. We'd print 5;
 		<form id="prob1Part2Form" class="form-inline col-md-12">
 		  <div class="form-group col-md-12">
 			<div class="col-md-2">
-				<button id="probBtn22" type="button" for="probAnwser22" class="btn btn-primary">Get Anwser</button>
+				<button id="probBtn22" type="button" for="probAnswer22" class="btn btn-primary">Get Answer</button>
 			</div>
-			 <input type="text" class="form-control " id="probAnwser22">
+			 <input type="text" class="form-control " id="probAnswer22">
 		  </div>
 		  
 		  <div class="form-group col-md-12">
@@ -137,9 +136,64 @@
 		  </div>
 		</form>
 	</div>	
-	
-	
   </div>
+
+	<div class="tab-pane" id="p3" role="tabpanel">
+		<div id="prob3Part1Container">
+			<div class="col-md-12">
+				Problem 3 can be found <a href="http://adventofcode.com/day/3" target="_blank">Here</a> and is broken into two parts.
+			</div>
+			<form class="form-inline col-md-12">
+				<div class="form-group col-md-12">
+					<div class="col-md-2">
+						<button id="probBtn3" type="button" for="probAnswer2" class="btn btn-primary">Get Answer</button>
+					</div>
+					<input type="text" class="form-control " id="probAnswer3">
+				</div>
+
+				<div class="form-group col-md-12">
+					<div class="col-md-2">
+						<button id="probSolutionBtn3" type="button" for="probSolution2" class="btn btn-primary">see A solution</button>
+					</div>
+					<textarea class="form-control" id="probSolution3"></textarea>
+				</div>
+			</form>
+
+			<div class="form-group col-md-12">
+				<div class="col-md-2">
+					<button id="prob3Part2Btn" type="button" class="btn btn-primary">On to Part 2!</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="prob3Part2Container" style="display:none">
+			<form id="prob3Part2Form" class="form-inline col-md-12">
+				<div class="form-group col-md-12">
+					<div class="col-md-2">
+						<button id="probBtn32" type="button" for="probAnswer32" class="btn btn-primary">Get Answer</button>
+					</div>
+					<input type="text" class="form-control " id="probAnswer32">
+				</div>
+
+				<div class="form-group col-md-12">
+					<div class="col-md-2">
+						<button id="probSolutionBtn32" type="button" for="probSolution32" class="btn btn-primary">see A solution</button>
+					</div>
+					<textarea class="form-control" id="probSolution32"></textarea>
+				</div>
+
+				<div class="form-group col-md-12">
+					<div class="col-md-2">
+						<button id="prob3Part1Btn" type="button" class="btn btn-primary">Back to Part 1!</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+  
+
+  
+  
 </div>
 
 
